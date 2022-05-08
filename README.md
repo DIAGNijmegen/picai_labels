@@ -16,7 +16,7 @@ For all cases, csPCa lesions are delineated and/or csPCa outcomes are recorded, 
 | [csPCa_lesion_delineations/<br>human_expert/resampled/](csPCa_lesion_delineations/human_expert/resampled/) | Original csPCa annotations resampled to the spatial resolution of the associated axial T2-weighted scan. |
 | [csPCa_lesion_delineations/<br>AI/Bosma22a/](csPCa_lesion_delineations/AI/Bosma22a/) | Automated AI-derived delineations of csPCa lesions ([Bosma et al., 2022a][Bosma22]) *{to-be-released}*. |
 | [anatomical_delineations/whole_gland/<br>AI/Bosma22b/](anatomical_delineations/whole_gland/AI) | Automated AI-derived delineations of the prostate whole-gland ([see algorithm used for this task](https://grand-challenge.org/algorithms/prostate-segmentation/)) *{to-be-released}*. |
-| [clinical_information/<br>marksheet.csv/](clinical_information/marksheet.csv/) | Clinical information (patient age, [PSA](https://www.cancer.gov/types/prostate/psa-fact-sheet), [PSA density](https://www.cancer.gov/types/prostate/psa-fact-sheet), prostate volume) and overview of each study (e.g. anonymized study date, MRI vendor and scanner used for acquisition, [GS](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gleason-score) per lesion {if prostatectomy or biopsies were performed}) in this dataset. |
+| [clinical_information/<br>marksheet.csv/](clinical_information/marksheet.csv/) | Clinical information (patient age, [PSA](PSA), [PSA density](PSA), prostate volume) and overview of each study (e.g. anonymized study date, MRI vendor and scanner used for acquisition, [GS](GS) per lesion {if prostatectomy or biopsies were performed}) in this dataset. |
 
 
 ### Label Mapping of [csPCa Annotations](csPCa_lesion_delineations/) 
@@ -30,6 +30,20 @@ All [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) 
 | 3                           | ISUP 3                | N/A                   |
 | 4                           | ISUP 4                | N/A                   |
 | 5                           | ISUP 5                | N/A                   |
+
+### List of [Clinical Information](clinical_information/marksheet.csv/) Descriptors 
+
+| Descriptor                  | Meaning               |
+|:----------------------------|:----------------------|
+| ```patient_id```            | Anonymized patient ID.                                                                                 | 
+| ```study_id```              | Anonymized study ID. Multiple study IDs can be assigned to the same patient ID.                        | 
+| ```mri_date```              | Anonymized date at the time of the MRI study.                                                          | 
+| ```patient_age```           | Patient age at the time of the MRI study.                                                              | 
+| ```psa```                   | [Prostate-specific antigen level (PSA)](PSA) (unit: ng/mL), as stated in the radiology report associated with the MRI study. If this value is missing, then it was not reported for the given study.    | 
+| ```prostate_volume```       | Prostate volume (unit: mL), as stated in the radiology report associated with the MRI study. In clinical practice, this value is typically approximated using the [conventional prolate ellipsoid model](PI-RADS). If this value is missing, then it was not reported for the given study.|
+| ```psad```                  | [Prostate-specific antigen density (PSAd)](PSA) (unit: ng/mL²), as stated in the radiology report associated with the MRI study. Note, this value may not neccessarily be the same as the PSA divided by the prostate volume, due to approximations and rounding errors during clinical reporting. If this value is missing, then it was not reported for the given study. | 
+| ```histopath_type```        | Procedure used to sample lesion tissue specimen for microscopic or histopathologic analysis. Its value can be ```SysBx``` for [systematic biopsies](SysBx), ```MRBx``` for [MR-guided biopsies](MRBx), ```SysBx+MRBx``` for [systematic](SysBx) and [MR-guided biopsies](MRBx), or ```RP``` for [radical prostatectomy](RP). If its value is missing, then no tissue sampling procedure was performed; indicating a negative MRI study.|
+| ```lesion_GS```             | [Gleason score (GS)](GS) assigned to each lesion after histopathologic analysis, where scores for different lesions are separated by ```,``` (commas). If its value is missing, then no tissue sampling procedure was performed; indicating a negative MRI study. If its value is ```N/A``` only for specific lesion(s), then those lesion(s) (as observed in radiology) were not biopsied or graded in histopathology (typically the case for [PI-RADS](PI-RADS) 1-2 lesions). |
 
 
 ### Dataset Characteristics
@@ -80,4 +94,8 @@ Nijmegen, The Netherlands
 [PI-RADS]: https://www.europeanurology.com/article/S0302-2838(19)30180-0/fulltext
 [ISUP]: https://pubmed.ncbi.nlm.nih.gov/27150257/
 [Bosma22]: https://fastmri.eu/research/bosma22a.html
-
+[PSA]: https://www.cancer.gov/types/prostate/psa-fact-sheet
+[SysBx]: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/systematic-biopsy
+[MRBx]: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/mri-guided-biopsy
+[RP]: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/radical-prostatectomy
+[GS]: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gleason-score
