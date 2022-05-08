@@ -7,20 +7,20 @@ Note, the **Public Training and Development Dataset** of the [PI-CAI challenge](
 ### Reference Standard for Annotations
 Patient cases used for the training datasets of the [PI-CAI challenge](https://pi-cai.grand-challenge.org/) are annotated with the same reference standard as used for the [ProstateX challenge](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6228312/pdf/JMI-005-044501.pdf), i.e. histologically-confirmed ([ISUP] ≥ 2) positives, and histologically- ([ISUP][ISUP] ≤ 1) or MRI- ([PI-RADS][PI-RADS] ≤ 2) confirmed negatives, without follow-up. Note, this means that certain patients (e.g. `11054`) can have a prior study that was found to be negative (`1001074` in 2018), but a subsequent study that was found to be positive (`1001075` in 2020). In this case, each study is annotated with respect to its associated histopathology or radiology findings only. From our institutional findings at [RUMC](https://www.diagnijmegen.nl/) ([Venderink et al., 2019](https://bjui-journals.onlinelibrary.wiley.com/doi/full/10.1111/bju.14853)), such scenarios typically emerge for less than <1% negative cases.
 
-For all cases, csPCa lesions are delineated and/or csPCa outcomes are recorded, by one of 10 trained investigators or 1 radiology resident, under supervision of one of 3 expert radiologists, at [RUMC](https://www.diagnijmegen.nl/) or [UMCG](https://www.umcg.nl/). Automated AI-derived delineations of csPCa lesions ([Bosma et al., 2022][Bosma22]) and the prostate whole-gland ([see algorithm used for this task](https://grand-challenge.org/algorithms/prostate-segmentation/)), will also be made available.
-
 ### Annotations and Resources
-| Location                    | Description         |
-|-----------------------------|-----------------|
+For all cases, csPCa lesions are delineated and/or csPCa outcomes are recorded, by one of 10 trained investigators or 1 radiology resident, under supervision of one of 3 expert radiologists, at [RUMC](https://www.diagnijmegen.nl/) or [UMCG](https://www.umcg.nl/). Lesion delineations were created using [ITK-SNAP v3.80](http://www.itksnap.org/pmwiki/pmwiki.php). Automated AI-derived delineations of csPCa lesions ([Bosma et al., 2022][Bosma22]) and the prostate whole-gland ([see algorithm used for this task](https://grand-challenge.org/algorithms/prostate-segmentation/)), will also be made available.
+
+| Location                    | Description     |
+|:----------------------------|:----------------|
 | [csPCa_lesion_delineations/<br>human_expert/original/](csPCa_lesion_delineations/human_expert/original/) | Original csPCa annotations, as made by one of the trained investigators or radiology resident. |
 | [csPCa_lesion_delineations/<br>human_expert/resampled/](csPCa_lesion_delineations/human_expert/resampled/) | Original csPCa annotations resampled to the spatial resolution of the associated axial T2-weighted scan. |
 | [csPCa_lesion_delineations/<br>AI/Bosma22a/](csPCa_lesion_delineations/AI/Bosma22a/) | Automated AI-derived delineations of csPCa lesions ([Bosma et al., 2022a][Bosma22]) *{to-be-released}*. |
 | [anatomical_delineations/whole_gland/<br>AI/Bosma22b/](anatomical_delineations/whole_gland/AI) | Automated AI-derived delineations of the prostate whole-gland ([see algorithm used for this task](https://grand-challenge.org/algorithms/prostate-segmentation/)) *{to-be-released}*. |
-| [clinical_information/<br>marksheet.csv/](clinical_information/marksheet.csv/) | Clinical information (patient age, PSA, PSA density, prostate volume) and overview of each study (e.g. MRI vendor and scanner, [GS](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gleason-score) per lesion if biopsies or prostatectomy was performed) in this dataset. |
+| [clinical_information/<br>marksheet.csv/](clinical_information/marksheet.csv/) | Clinical information (patient age, [PSA](https://www.cancer.gov/types/prostate/psa-fact-sheet), [PSA density](https://www.cancer.gov/types/prostate/psa-fact-sheet), prostate volume) and overview of each study (e.g. anonymized study date, MRI vendor and scanner used for acquisition, [GS](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gleason-score) per lesion {if prostatectomy or biopsies were performed}) in this dataset. |
 
 
 ### Label Mapping of [csPCa Annotations](csPCa_lesion_delineations/) 
-Note, all [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) carry **granular or multi-class labels** (ISUP ≤ 1, 2, 3, 4, 5), while all [automated AI-derived annotations](csPCa_lesion_delineations/AI/) carry **binary labels** (ISUP ≤ 1 or ≥ 2).
+All [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) carry **granular or multi-class labels** (ISUP ≤ 1, 2, 3, 4, 5), while all [automated AI-derived annotations](csPCa_lesion_delineations/AI/) carry **binary labels** (ISUP ≤ 1 or ≥ 2).
 
 | Label                       | [Expert-Derived Annotations](csPCa_lesion_delineations/human_expert/) | [AI-Derived Annotations](csPCa_lesion_delineations/AI/) |
 |:---------------------------:|:---------------------:|:---------------------:|
