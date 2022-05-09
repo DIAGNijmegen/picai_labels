@@ -12,8 +12,8 @@ For all cases, csPCa lesions were delineated and/or csPCa outcomes were recorded
 
 | Location                    | Description     |
 |:----------------------------|:----------------|
-| [csPCa_lesion_delineations/<br>human_expert/original/](csPCa_lesion_delineations/human_expert/original/) | Original csPCa annotations, as made by one of the trained investigators or radiology resident. |
-| [csPCa_lesion_delineations/<br>human_expert/resampled/](csPCa_lesion_delineations/human_expert/resampled/) | Original csPCa annotations resampled to the spatial resolution of the associated axial T2-weighted scan. |
+| [csPCa_lesion_delineations/<br>human_expert/original/](csPCa_lesion_delineations/human_expert/original/) | Original csPCa annotations, as made by one of the trained investigators or radiology resident. Available for 1295/1500 (86%) cases. |
+| [csPCa_lesion_delineations/<br>human_expert/resampled/](csPCa_lesion_delineations/human_expert/resampled/) | Original csPCa annotations resampled to the spatial resolution of the associated axial T2-weighted scan. Available for 1295/1500 (86%) cases. |
 | [csPCa_lesion_delineations/<br>AI/Bosma22a/](csPCa_lesion_delineations/AI/Bosma22a/) | Automated AI-derived delineations of csPCa lesions ([Bosma et al., 2022a][Bosma22]) *{to-be-released}*. |
 | [anatomical_delineations/whole_gland/<br>AI/Bosma22b/](anatomical_delineations/whole_gland/AI) | Automated AI-derived delineations of the prostate whole-gland ([see algorithm used for this task](https://grand-challenge.org/algorithms/prostate-segmentation/)) *{to-be-released}*. |
 | [clinical_information/<br>marksheet.csv/](clinical_information/marksheet.csv/) | Clinical information (patient age, [PSA][PSA], [PSA density][PSA], prostate volume) and overview of each study (e.g. anonymized study date, MRI vendor and scanner used for acquisition, [GS][GS] per lesion {if prostatectomy or biopsies were performed}) in this dataset. |
