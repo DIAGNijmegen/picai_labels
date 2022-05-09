@@ -62,6 +62,10 @@ All [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) 
 | — ISUP 5                    | 55              |
 
 
+### Open-Source Contributions
+We encourage open-source contributions! For instance, you can contribute expert-derived delineations of the prostate whole-gland and zonal anatomy at the spatial resolution of axial T2-weighted images. If you're interested, feel free to propose PRs for inclusion to this repo. Pending quality control, substantial contributions will be merged in and credited accordingly.
+
+
 ### Reference
 If you are using this dataset or some part of it, please cite the following article:
 
@@ -78,7 +82,7 @@ If you are using this dataset or some part of it, please cite the following arti
 ```
 
 ### License
-[CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ### Managed By
 Diagnostic Image Analysis Group,
