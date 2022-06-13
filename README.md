@@ -55,15 +55,25 @@ All [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) 
 
 | Characteristic              | Frequency       |
 |:----------------------------|:---------------:|
-| No. of Patients             | 1476            |
-| No. of Cases                | 1500            |
-| — Benign or Indolent PCa    | 1075            |
-| — csPCa (ISUP ≥ 2)          | 425             |
-| No. of ISUP-Based Lesions   | 456             |
-| — ISUP 2                    | 260             |
-| — ISUP 3                    | 109             |
-| — ISUP 4                    | 41              |
-| — ISUP 5                    | 55              |
+| Number of sites                | 11              |
+| Number of MRI scanners         | 5 S, 2 P        |
+| Number of patients             | 1476            |
+| Number of cases                | 1500            |
+| — Benign or indolent PCa       | 1075            |
+| — csPCa (ISUP ≥ 2)             | 425             |
+| Median age (years)             | 66 (IQR: 61–70) |
+| Median PSA (ng/mL)             | 8.5 (IQR: 6–13) |
+| Median prostate volume (mL)    | 57 (IQR: 40–80) |
+| Number of positive MRI lesions | 1087            |
+| — PI-RADS 3                    | 246 (23%)       |
+| — PI-RADS 4                    | 438 (40%)       |
+| — PI-RADS 5                    | 403 (37%)       |
+| Number of ISUP-based lesions   | 776             |
+| — ISUP 1                       | 311 (40%)       |
+| — ISUP 2                       | 260 (34%)       |
+| — ISUP 3                       | 109 (14%)       |
+| — ISUP 4                       | 41 (5%)         |
+| — ISUP 5                       | 55 (7%)         |
 
 
 ### Open-Source Contributions
