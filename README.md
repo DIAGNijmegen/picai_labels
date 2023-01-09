@@ -1,7 +1,7 @@
 # Annotations for the [PI-CAI Challenge](https://pi-cai.grand-challenge.org/): Public Training and Development Dataset
 
 ### Imaging Dataset
-To download the associated imaging data, visit: [https://zenodo.org/record/6517398](https://zenodo.org/record/6517398).
+To download the associated imaging data, visit: [https://zenodo.org/record/6624726](https://zenodo.org/record/6624726).
 Note, the **Public Training and Development Dataset** of the [PI-CAI challenge](https://pi-cai.grand-challenge.org/) includes 328 cases from the [ProstateX challenge](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6228312/pdf/JMI-005-044501.pdf). Thus, we strongly recommend using this dataset exclusively, and not in addition to the ProstateX dataset.  
 
 ### Reference Standard for Annotations
