@@ -49,7 +49,7 @@ All [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) 
 | ```psad```                  | [Prostate-specific antigen density (PSAd)][PSA] (unit: ng/mL²), as stated in the radiology report associated with the MRI study. Note, this value may not neccessarily be the same as the PSA divided by the prostate volume, due to approximations and rounding errors during clinical reporting. If this value is missing, then it was not reported for the given study. | 
 | ```histopath_type```        | Procedure used to sample lesion tissue specimen for microscopic or histopathologic analysis. Its value can be ```SysBx``` for [systematic biopsies][SysBx], ```MRBx``` for [MR-guided biopsies][MRBx], ```SysBx+MRBx``` for [systematic][SysBx] and [MR-guided biopsies][MRBx], or ```RP``` for [radical prostatectomy][RP]. If its value is missing, then no tissue sampling procedure was performed; indicating a negative MRI study.|
 | ```lesion_GS```             | [Gleason score (GS)][GS] assigned to each lesion after histopathologic analysis, where scores for different lesions are separated by ```,``` (commas). If its value is missing, then no tissue sampling procedure was performed; indicating a negative MRI study. If its value is ```N/A``` only for specific lesion(s), then those lesion(s) (as observed in radiology) were not biopsied or graded in histopathology (typically the case for [PI-RADS][PI-RADS] 1-2 lesions). |
-
+| ```center```                | Site ID for the tertiary care center where the patient examination had been acquired, with the following keys: "RUMC": Radboud University Medical Center, Nijmegen; "ZGT": Ziekenhuisgroep Twente, Hengelo; "PCNN": Prostaat Centrum Noord-Nederland, Groningen. |
 
 ### Dataset Characteristics
 
