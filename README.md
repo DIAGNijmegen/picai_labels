@@ -1,4 +1,9 @@
 # Annotations for the [PI-CAI Challenge](https://pi-cai.grand-challenge.org/): Public Training and Development Dataset
+--- 
+### Updates
+🚨 22 May 2025: Thanks to [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456), we now have expert-derived annotations for the 205 positive cases that were previously annotated by an AI system only ([Bosma et al., 2022a][Bosma22])! Combined with the pre-existing annotations for the remaining 1295 cases, researchers/developers can now use human expert-derived annotations for all 1500 cases spanning the **Public Training and Development Dataset** of the [PI-CAI challenge](https://pi-cai.grand-challenge.org/). If you are using these annotations or some part of it, please cite [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456) accordingly.
+
+--- 
 
 ### Imaging Dataset
 To download the associated imaging data, visit: [https://zenodo.org/record/6624726](https://zenodo.org/record/6624726).
@@ -21,12 +26,12 @@ Automated AI-derived delineations of the prostate whole-gland ([see algorithm us
 | [csPCa_lesion_delineations/<br>AI/Bosma22a](csPCa_lesion_delineations/AI/Bosma22a) | Automated AI-derived delineations of csPCa lesions ([Bosma et al., 2022a][Bosma22]). |
 | [anatomical_delineations/<br>whole_gland/AI/Bosma22b](anatomical_delineations/whole_gland/AI/Bosma22b) | Automated AI-derived delineations of the prostate whole-gland ([see algorithm used for this task](https://grand-challenge.org/algorithms/prostate-segmentation/)). Note, that AI-derived annotations can be susceptible to errors or faulty segmentations (e.g. whole-gland segmentation for case [`11050_1001070`](anatomical_delineations/whole_gland/AI/Bosma22b/11050_1001070.nii.gz)). |
 | [clinical_information/<br>marksheet.csv/](clinical_information/marksheet.csv/) | Clinical information (patient age, [PSA][PSA], [PSA density][PSA], prostate volume) and overview of each study (e.g. anonymized study date, MRI vendor and scanner used for acquisition, [GS][GS] per lesion {if prostatectomy or biopsies were performed}) in this dataset. |
-
+| [csPCa_lesion_delineations/<br>human_expert/Pooch25/](csPCa_lesion_delineations/human_expert/Pooch25/) | 🚨 All-new human expert-derived annotations from [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456) for the 205 positive cases that were previously annotated by an AI system only ([Bosma et al., 2022a][Bosma22]). Combined with the pre-existing annotations for the remaining 1295 cases, researchers/developers can now use human expert-derived annotations for all 1500 cases.|
 
 ### Label Mapping of [csPCa Annotations](csPCa_lesion_delineations/) 
 All [expert-derived csPCa annotations](csPCa_lesion_delineations/human_expert/) carry **granular or multi-class labels** ([ISUP][ISUP] ≤ 1, 2, 3, 4, 5), while all [automated AI-derived annotations](csPCa_lesion_delineations/AI/) carry **binary labels** ([ISUP][ISUP] ≤ 1 or ≥ 2).
 
-| Label                       | [Expert-Derived Annotations](csPCa_lesion_delineations/human_expert/) | [AI-Derived Annotations](csPCa_lesion_delineations/AI/) |
+| Label                       | [Expert-Derived Annotations](csPCa_lesion_delineations/human_expert/) | [AI-Derived Annotations](csPCa_lesion_delineations/AI/) or [Additional Expert-Derived Annotations](csPCa_lesion_delineations/human_expert/Pooch25) ([Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456))  |
 |:---------------------------:|:---------------------:|:---------------------:|
 | 0                           | [ISUP][ISUP] ≤ 1      | [ISUP][ISUP] ≤ 1      |
 | 1                           | N/A                   | [ISUP][ISUP] ≥ 2      |
