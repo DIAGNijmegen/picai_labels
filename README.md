@@ -1,7 +1,7 @@
 # Annotations for the [PI-CAI Challenge](https://pi-cai.grand-challenge.org/): Public Training and Development Dataset
 --- 
 ### Updates
-🚨 22 May 2025: Thanks to [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456), we now have expert-derived annotations for the 205 positive cases that were previously annotated by an AI system only ([Bosma et al., 2022a][Bosma22])! Combined with the pre-existing annotations for the remaining 1295 cases, researchers/developers can now use human expert-derived annotations for all 1500 cases spanning the **Public Training and Development Dataset** of the [PI-CAI challenge](https://pi-cai.grand-challenge.org/). If you are using these annotations or some part of it, please cite [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456) accordingly.
+🚨 1 July 2025: Thanks to [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456), we now have expert-derived annotations for the 205 positive cases that were previously annotated by an AI system only ([Bosma et al., 2022a][Bosma22])! Combined with the pre-existing annotations for the remaining 1295 cases, researchers/developers can now use human expert-derived annotations for all 1500 cases spanning the **Public Training and Development Dataset** of the [PI-CAI challenge](https://pi-cai.grand-challenge.org/). If you are using these annotations or some part of it, please cite [Pooch et al., 2025](https://www.medrxiv.org/content/early/2025/05/13/2025.05.13.25327456) accordingly.
 
 --- 
 
